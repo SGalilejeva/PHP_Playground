@@ -1,13 +1,16 @@
 <?php
+
+require_once 'util.php';
+
 const MYEL = "<div>";
-for ($i = 1; $i < 101; $i++) {
+for ($i = 1; $i < 10; $i++) {
     if ($i % 3 == 0 && $i % 5 == 0) {
-        echo "<div>FizzBuzz</div>";
+        printFizzBuzz("FizzBuzz");
     } else if ($i % 3 == 0) {
-        echo "<div>Fizz</div>";
+        printFizzBuzz("Fizz");
     } else if ($i % 5 == 0) {
-        echo "<div>Buzz</div>";
+        printFizzBuzz("Buzz");
     } else {
-        echo "<div>$i</div>";
+        printFizzBuzz("$i");
     }
 }
