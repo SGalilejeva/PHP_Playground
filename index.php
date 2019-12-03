@@ -17,9 +17,6 @@ echo "<p>My Lorem" . $a . "</p>";
 ?>
 <hr> 
 
-<?php
-echo "more php" . $a;
-
 
 </body>
 </html>
