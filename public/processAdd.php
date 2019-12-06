@@ -1,4 +1,31 @@
 <?php
 
 require_once '../src/db.php';
-die ("For Now!");
+
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+echo "We got a POST request!<br>";
+foreach ($_POST as $key => $value) {
+    echo "We received name $key with value $value <br>";
+}
+if (isset($_POST['myname'])) {
+    echo "Why hello there " . $_POST['myname'] . "! <hr>";
+    $_SESSION['myname'] = $_POST['myname'];
+}
+var_dump($_POST);
+
+$stmt = $conn->prepare("INSERT INTO tracks (title, artist, length, user_id) 
+VALUES (:title, :artist, :length, :user_id)");
+    $stmt->bindParam(':title', $title);
+    $stmt->bindParam(':artist', $artist);
+    $stmt->bindParam(':length', $length);
+    $stmt->bindParam(':user_id', $user_id);
+    
+    $stmt->execute();
+
+    header('Location: /');
+    
+} else {
+    echo "That was not a Post, most liekly GET";
+}
+die ("Let's post to add!");

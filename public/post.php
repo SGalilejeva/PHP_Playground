@@ -8,7 +8,7 @@
 
 </form>
 <?php
-if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 echo "We got a GET request!<br>";
 foreach ($_POST as $key => $value) {
     echo "We received name $key with value $value <br>";
