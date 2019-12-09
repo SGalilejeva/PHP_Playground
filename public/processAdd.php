@@ -14,6 +14,11 @@ if (isset($_POST['myname'])) {
 }
 var_dump($_POST);
 
+    $title = $_POST['title'];
+    $artist = $_POST['artist']; //FIXME when no artist exists
+    $length = $_POST['length'];
+    $user_id = 1;
+
 $stmt = $conn->prepare("INSERT INTO tracks (title, artist, length, user_id) 
 VALUES (:title, :artist, :length, :user_id)");
     $stmt->bindParam(':title', $title);
@@ -28,4 +33,4 @@ VALUES (:title, :artist, :length, :user_id)");
 } else {
     echo "That was not a Post, most liekly GET";
 }
-die ("Let's post to add!");
+
