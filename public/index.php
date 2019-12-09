@@ -2,6 +2,9 @@
 <?php
 
 require_once '../public/config.php';
+
+require_once '../src/login.php';
+
 require_once '../src/printSongs.php';
 require_once '../src/addSongs.php';
 
