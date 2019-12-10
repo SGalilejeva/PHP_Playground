@@ -13,3 +13,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->execute();
 
 }
+// Check DButils php for the code
