@@ -25,13 +25,20 @@ catch(PDOException $e)
     // set the resulting array to associative
     $isFetchModeSet = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 var_dump($isFetchModeSet);
-foreach ($stmt->fetchAll() as $key => $value) {
-    echo "<hr>";
-    echo "KEY: ";
-    var_dump($key);
-    echo "<br>";
-    var_dump($value); 
-}
+// we store results in memory 
+$allRows = $stmt->fetchAll();
+// foreach ($allRows as $key => $value) {
+//     echo "<hr>";
+//     echo "KEY: ";
+//     var_dump($key);
+//     echo "<br>";
+//     var_dump($value); 
+// }
+foreach ($allRows as $value) {
+    echo "<div>";
+    echo "<span>Task: " . $value['task'] . "</span>";
+    echo "</div>";
 
+}
 
 
