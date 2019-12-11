@@ -2,7 +2,7 @@
 <?php
 
 require_once '../public/config.php';
-
+require_once '../templates/head.php';
 require_once '../src/login.php';
 
 
@@ -34,9 +34,19 @@ $allRows = $stmt->fetchAll();
 //     echo "<br>";
 //     var_dump($value); 
 // }
-foreach ($allRows as $value) {
+
+
+$columnsPrinted = false;
+foreach ($allRows as $row) {
+    if (!$columnsPrinted) {
+        foreach ($row as $key => $value) {
+            echo "KEY: $key <br>";
+        }
+        $columnsPrinted = true; 
+    }
+    
     echo "<div>";
-    echo "<span>Task: " . $value['task'] . "</span>";
+    echo "<span> Task: " . $value["task"] . "</span>";
     echo "</div>";
 
 }
