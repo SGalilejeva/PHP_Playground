@@ -4,7 +4,7 @@
 require_once '../public/config.php';
 require_once '../templates/head.php';
 require_once '../src/login.php';
-
+require_once '../src/printTask.php';
 
 require_once '../src/addTask.php';
 
@@ -36,20 +36,20 @@ $allRows = $stmt->fetchAll();
 // }
 
 
-$columnsPrinted = false;
-foreach ($allRows as $row) {
-    if (!$columnsPrinted) {
-        foreach ($row as $key => $value) {
-            echo "KEY: $key <br>";
-        }
-        $columnsPrinted = true; 
-    }
+// $columnsPrinted = false;
+// foreach ($allRows as $row) {
+//     if (!$columnsPrinted) {
+//         foreach ($row as $key => $value) {
+//             echo "KEY: $key <br>";
+//         }
+//         $columnsPrinted = true; 
+//     }
     
-    echo "<div>";
-    echo "<span> Task: " . $row["task"] . "</span>";
-    echo "<span>Location: " . $row["location"] . "</span>";
-    echo "<hr>";
-    echo "</div>";
+//     echo "<div>";
+//     echo "<span> Task: " . $row["task"] . "</span>";
+//     echo "<span>Location: " . $row["location"] . "</span>";
+//     echo "<hr>";
+//     echo "</div>";
 
 }
 

@@ -17,5 +17,7 @@ foreach ($allRows as $row) {
     }
     echo "<div>";
     echo "<span>Task: " . $row["task"] . "</span>";
+    echo "<span>Location: " . $row["location"] . "</span>";
+    echo "<hr>";
     echo "</div>";
 }
