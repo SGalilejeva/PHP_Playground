@@ -14,16 +14,14 @@ if (isset($_POST['myname'])) {
 }
 var_dump($_POST);
 
-    $title = $_POST['title'];
-    $artist = $_POST['artist']; //FIXME when no artist exists
-    $length = $_POST['length'];
-    $user_id = 1;
+    $title = $_POST['task'];
+    $artist = $_POST['location']; 
+    $user_id = (int)0;
 
-$stmt = $conn->prepare("INSERT INTO tracks (title, artist, length, user_id) 
-VALUES (:title, :artist, :length, :user_id)");
-    $stmt->bindParam(':title', $title);
-    $stmt->bindParam(':artist', $artist);
-    $stmt->bindParam(':length', $length);
+$stmt = $conn->prepare("INSERT INTO todo (task, location, user_id) 
+VALUES (:task, :location, :user_id)");
+    $stmt->bindParam(':task', $task);
+    $stmt->bindParam(':location', $location);
     $stmt->bindParam(':user_id', $user_id);
     
     $stmt->execute();

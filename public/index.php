@@ -6,7 +6,7 @@ require_once '../templates/head.php';
 require_once '../src/login.php';
 
 
-require_once '../src/addSongs.php';
+require_once '../src/addTask.php';
 
 try {
     $conn = new PDO("mysql:host=$SERVER;dbname=$DB", USER, PW);
@@ -46,7 +46,7 @@ foreach ($allRows as $row) {
     }
     
     echo "<div>";
-    echo "<span> Task: " . $value["task"] . "</span>";
+    echo "<span> Task: " . $row["task"] . "</span>";
     echo "</div>";
 
 }
