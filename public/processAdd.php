@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once '../src/db.php';
 
 
@@ -13,7 +13,7 @@ var_dump($_POST);
 
     $task = $_POST['task'];
     $location = $_POST['location']; 
-    $user_id = 1;
+    $user_id = $_SESSION['id'];
 
 $stmt = $conn->prepare("INSERT INTO tasks (task, location, user_id) 
 VALUES (:task, :location, :user_id)");

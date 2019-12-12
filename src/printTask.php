@@ -8,7 +8,9 @@ if (!isset($_SESSION['username'])) {
     echo "Hello there " . $_SESSION['username'] . "!<br>";
 }
 
-$stmt = $conn->prepare("SELECT * FROM tasks");
+$stmt = $conn->prepare("SELECT * FROM tasks 
+WHERE (user_id = :user_id)");
+$stmt->bindParam(':user_id', $_SESSION['id']);
 $stmt->execute();
 
 $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
