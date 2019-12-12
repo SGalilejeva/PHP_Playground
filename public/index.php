@@ -7,6 +7,7 @@ require_once '../src/login.php';
 require_once '../src/printTask.php';
 require_once '../src/addTask.php';
 require_once '../public/deleteTask.php';
+require_once '../templates/foot.php';
 // try {
 //     $conn = new PDO("mysql:host=$SERVER;dbname=$DB", USER, PW);
 //     // set the PDO error mode to exception
