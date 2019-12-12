@@ -25,7 +25,8 @@ VALUES (:task, :location, :user_id)");
 
     header('Location: /');
     
-} else {
-    echo "That was not a Post, most likely GET";
-}
+} 
+// else {
+//     echo "That was not a Post, most likely GET";
+// }
 
