@@ -10,10 +10,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 // var_dump($_POST);
 
-    $task_id = $_POST['delete'];
+$task_id = $_POST['delete'];
 
 
-$stmt = $conn->prepare("DELETE FROM 'tasks' WHERE 'tasks','id' = (:taskid)");
+$stmt = $conn->prepare("DELETE FROM 'tasks' WHERE 'tasks' , 'id' = (:taskid)");
     $stmt->bindParam(':taskid', $task_id);
     
     $stmt->execute();
