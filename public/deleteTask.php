@@ -22,7 +22,4 @@ $stmt = $conn->prepare("DELETE FROM `tasks` WHERE `tasks`.`id` = (:taskid)");
     
 } 
 
-else {
-    echo "That was not a POST, most likely GET";
-}
 

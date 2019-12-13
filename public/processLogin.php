@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
 
     // prepare and bind
-    $stmt = $conn->prepare("SELECT hash FROM users 
+    $stmt = $conn->prepare("SELECT hash, id FROM users 
     WHERE (username = :username)");
     $stmt->bindParam(':username', $username);
 
@@ -29,8 +29,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         } else {
             echo "<br>Login Failed";
         }
+    } else {
+        echo "No such user!";
     }
-// header('Location: /');
+header('Location: /');
 
 }
-// Check DButils php for the code
+

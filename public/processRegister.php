@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
     //TODO add real users
 
-    // prepare and bind
+    // prepare and bind and insert try and catch
     $stmt = $conn->prepare("INSERT INTO users (username, hash)
                             VALUES (:username, :hash)");
     $stmt->bindParam(':username', $username);
