@@ -1,4 +1,6 @@
-
+<?php
+require_once '../templates/head.php';
+?>
 <form action="post.php" method="post">
 <input type="text" name="myname" placeholder="Enter My Name" required>
 <input type="text" name="lastname" placeholder="Enter My Last Name" required>
@@ -19,3 +21,4 @@ if (isset($_POST['myname'])) {
 }
 var_dump($_POST);
 }
+require_once '../templates/foot.php';

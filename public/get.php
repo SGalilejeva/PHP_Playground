@@ -1,4 +1,6 @@
-
+<?php
+require_once '../templates/head.php';
+?>
 <form action="get.php" method="get">
     <input type="text" name="myname" placeholder="Enter My Name" required>
     <input type="text" name="lastname" placeholder="Enter My Last Name" required>
@@ -19,3 +21,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     }
 var_dump($_GET);
 }
+require_once '../templates/head.php';
