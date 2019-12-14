@@ -1,4 +1,5 @@
 <?php
+const PAGETITLE = "TASK LIST";
 
 $SERVER = "localhost";
 const USER = "root";
