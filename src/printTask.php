@@ -4,9 +4,10 @@ require_once '../src/db.php';
 if (!isset($_SESSION['username'])) {
     echo "Please Login to see your tasks";
     return;
-} else {
-    echo "Hello there " . $_SESSION['username'] . "!<br>";
-}
+} 
+// else {
+//     echo "Hello there " . $_SESSION['username'] . "!<br>";
+// }
 
 $stmt = $conn->prepare("SELECT * FROM tasks 
 WHERE (user_id = :user_id)");

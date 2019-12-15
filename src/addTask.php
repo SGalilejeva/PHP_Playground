@@ -1,3 +1,11 @@
+<?php
+if (!isset($_SESSION['username'])) {
+    return;
+}
+
+?>
+
+
 <div class="task-form">
 <form action="processAdd.php" method="post">
 <input name="task" placeholder="enter task" required>

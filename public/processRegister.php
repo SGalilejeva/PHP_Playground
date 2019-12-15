@@ -26,12 +26,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //TODO add real users
 
     // prepare and bind and insert try and catch
-    $stmt = $conn->prepare("INSERT INTO users (username, hash)
-                            VALUES (:username, :hash)");
-    $stmt->bindParam(':username', $username);
-    $stmt->bindParam(':hash', $hash);
+  
+        $stmt = $conn->prepare("INSERT INTO users (username, hash)
+        VALUES (:username, :hash)");
+        $stmt->bindParam(':username', $username);
+        $stmt->bindParam(':hash', $hash);
+    
+        $stmt->execute();
 
-    $stmt->execute();
     //we go to our index.php or rather our root
     
 } else {

@@ -6,6 +6,10 @@ if (isset($_SESSION['username'])) {
     echo "<form action='processLogout.php' method='post'>";
     echo "<button>Logout</button>";
     echo "</form>";
+    echo "<hr>";
+    echo "<div class = 'virsraksts'> MY TASKS!</div>";
+
+
 
 } else {
    

@@ -1,10 +1,17 @@
 body {
-    background-color: rgb(175, 126, 159);
+    background-color: rgb(197, 82, 207);
 }
 
  input {
         display: flex;
         font-family: 'Courier New', Courier, monospace;
+        width: 50%;
+        height: 30px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
       }
 
 input::placeholder{
@@ -13,9 +20,15 @@ input::placeholder{
       
 
 button {
-        background-color: rgb(126, 67, 106);
-        color: rgb(197, 82, 207);
-        font-size: 10px;
+background-color: rgb(126, 67, 106);
+color: rgb(197, 82, 207);
+padding: 14px 20px;
+  border-radius: 8px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  font-size: 16px;
       }
       
 button:hover {
@@ -25,16 +38,23 @@ button:hover {
 
 .value-cell {
     display: inline-block;
-    min-width: 2%;
-
+    min-width: 2%; 
 }
+
+.virsraksts {
+    color: cornsilk;
+    text-align: center;
+    font-weight: bold;
+    font-size: 42px;
+} 
+
+
 
 .row-column-names {
     display: flex;
     justify-content: space-around;
-    
-
-}
+    width: 100%;
+} 
 
 .login-f {
     display: inline-block;
