@@ -1,23 +1,73 @@
 body {
-    background-color: rgb(29, 139, 53);
+    background-color: rgb(175, 126, 159);
 }
 
-.info-text {
-    background-color: aquamarine;
-}
+/* body::before {
+
+      background-color: rgb(175, 126, 159);
+      background-size: cover;
+      content: "";
+      /* display: block;
+      position: absolute; */
+      top: 0;
+      left: 0;
+      /* width: 50%;
+      height: 50%; */
+      z-index: -2;
+      opacity: 1;
+      }   */
+
+
+ input {
+        /* width: 30%; */
+        /* height: 30px;
+        padding: 12px 20px;
+        margin: 8px 0; */
+        display: flex;
+        
+        font-family: 'Courier New', Courier, monospace;
+      }
+input::placeholder{
+          color: black; 
+      }
+      
+
+button {
+        background-color: rgb(126, 67, 106);
+        color: rgb(197, 82, 207);
+/* padding: 14px 20px;
+        border-radius: 8px;
+        margin        : 8px 0;
+        border: none;
+        cursor: pointer; */
+        /* width: 30%; */
+        font-size: 10px;
+      }
+      
+button:hover {
+        opacity: 0.8;
+      }
+
 
 .value-cell {
     display: inline-block;
     min-width: 2%;
-
 
 }
 
 .row-column-names {
     display: flex;
     justify-content: space-around;
+    
+
 }
 
 .login-f {
     display: inline-block;
 }
+
+.logout {
+    display: flex;
+    
+  }
+
