@@ -2,31 +2,11 @@ body {
     background-color: rgb(175, 126, 159);
 }
 
-/* body::before {
-
-      background-color: rgb(175, 126, 159);
-      background-size: cover;
-      content: "";
-      /* display: block;
-      position: absolute; */
-      top: 0;
-      left: 0;
-      /* width: 50%;
-      height: 50%; */
-      z-index: -2;
-      opacity: 1;
-      }   */
-
-
  input {
-        /* width: 30%; */
-        /* height: 30px;
-        padding: 12px 20px;
-        margin: 8px 0; */
         display: flex;
-        
         font-family: 'Courier New', Courier, monospace;
       }
+
 input::placeholder{
           color: black; 
       }
@@ -35,12 +15,6 @@ input::placeholder{
 button {
         background-color: rgb(126, 67, 106);
         color: rgb(197, 82, 207);
-/* padding: 14px 20px;
-        border-radius: 8px;
-        margin        : 8px 0;
-        border: none;
-        cursor: pointer; */
-        /* width: 30%; */
         font-size: 10px;
       }
       
